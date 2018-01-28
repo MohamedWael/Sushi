@@ -25,7 +25,7 @@ public class LoginWithFBButton {
      */
     public LoginWithFBButton(LoginButton loginButton) {
         this.mLoginButton = loginButton;
-        mCallbackManager = CallbackManager.Factory.create();
+        mCallbackManager = FacebookConfig.getInstance().getDefaultCallBackManager();
     }
 
     /**
@@ -43,11 +43,7 @@ public class LoginWithFBButton {
      * @param permissions facebook read permissions
      */
     public void setReadPermissions(FBPermissions... permissions) {
-        String[] permissionsString = new String[permissions.length];
-        for (int i = 0; i < permissions.length; i++) {
-            permissionsString[i] = permissions[i].getPermission();
-        }
-        setReadPermissions(permissionsString);
+        setReadPermissions(FacebookConfig.permissionsToStringArray(permissions));
     }
 
 
