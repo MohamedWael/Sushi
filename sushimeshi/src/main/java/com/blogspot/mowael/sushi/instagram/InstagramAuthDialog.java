@@ -60,10 +60,6 @@ public class InstagramAuthDialog extends DialogFragment implements InstagramAuth
         getPresenter().setAuthListener(listener);
     }
 
-    public void setAuthenticationData(@StringRes int clientID, @StringRes int redirectUri) {
-        getPresenter().setAuthenticationData(getString(clientID), getString(redirectUri));
-    }
-
     public void setAuthenticationData(String clientID, String redirectUri) {
         getPresenter().setAuthenticationData(clientID, redirectUri);
     }
