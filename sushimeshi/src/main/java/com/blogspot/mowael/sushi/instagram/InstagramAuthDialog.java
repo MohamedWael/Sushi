@@ -105,7 +105,7 @@ public class InstagramAuthDialog extends DialogFragment implements InstagramAuth
     @Override
     public void setTitle(String title) {
         if (getDialog() != null)
-        getDialog().setTitle(title);
+            getDialog().setTitle(title);
     }
 
     @Override
