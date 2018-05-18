@@ -1,1 +1,1 @@
-include ':sushimeshi'
+include ':sampleapp', ':sushimeshi'
